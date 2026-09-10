@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Survey - The Resilience Scorecard</title>
+
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css"/>
+
+<style>
+/* =========================================================
+   SHARE & IMPROVE PAGE
+   ========================================================= */
+.share-improve-page {
+  padding-top: 72px;
+  background: #f8fafc;
+}
+
+.share-choice-card {
+  padding: 2rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.share-choice-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 1rem;
+  background: rgba(13, 110, 253, 0.08);
+  color: #0d6efd;
+  font-size: 1.3rem;
+}
+
+.share-choice-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.share-choice-card p {
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 1.4rem;
+}
+
+.share-choice-card .btn {
+  margin-top: auto;
+}
+
+.share-form-area {
+  scroll-margin-top: 95px;
+  margin-top: 1rem;
+}
+
+.share-form-switcher {
+  max-width: 760px;
+  margin: 0 auto 2rem;
+  padding: 0.35rem;
+  background: #eaf0f6;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem;
+}
+
+.share-switch-btn {
+  border: 0;
+  border-radius: 9px;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.share-switch-btn:hover,
+.share-switch-btn.active {
+  background: #fff;
+  color: #0d6efd;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+.share-form-panel {
+  padding-bottom: 2rem;
+}
+
+.share-form-heading {
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
+}
+
+.share-form-heading h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0.15rem 0 0.65rem;
+}
+
+.share-form-heading p {
+  margin: 0;
+  color: #64748b;
+}
+
+.share-form-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #0d6efd;
+}
+
+.google-form-shell {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+}
+
+.google-form-shell iframe {
+  width: 100%;
+  border: 0;
+  display: block;
+  background: #fff;
+}
+
+.share-external-link {
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.share-contact-note {
+  max-width: 820px;
+  margin: 2rem auto 0;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  color: #64748b;
+}
+
+.share-contact-note a {
+  font-weight: 600;
+}
+
+@media (max-width: 767.98px) {
+  .share-improve-page {
+    padding-top: 60px;
+  }
+
+  .share-choice-card {
+    padding: 1.5rem;
+  }
+
+  .share-form-switcher {
+    grid-template-columns: 1fr;
+  }
+
+  .google-form-shell {
+    border-radius: 10px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Main Navigation -->
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container-fluid px-4">
+    <div class="navbar-brand d-flex align-items-center gap-2">
+      <a href="https://sentinellandscapes.org/" target="_blank" rel="noopener noreferrer" class="logo-link">
+        <img src="assets/SL_logo.png" alt="Sentinel Landscapes Logo" height="52px">
+      </a>
+      <a href="index.html" class="brand-text-link">
+        <span class="fw-bold">The Resilience Scorecard</span>
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="bi bi-house-door me-1"></i>Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="how-to.html">
+            <i class="bi bi-book me-1"></i>How it Works
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tool.html">
+            <i class="bi bi-play-btn me-1"></i>Training
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="spotlight.html">
+            <i class="bi bi-star me-1"></i>Spotlight
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="survey.html">
+            <i class="bi bi-chat-heart me-1"></i>Share &amp; Improve
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Share & Improve Section -->
+<section class="share-improve-page">
+  <div class="container py-5">
+
+    <!-- Page Header -->
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto text-center">
+        <div class="section-header-accent"></div>
+        <h2 class="display-5 fw-bold mb-3">Help Shape the Resilience Scorecard</h2>
+        <p class="lead text-muted mb-0">
+          Your experience can help us improve the framework and understand how
+          resilience information is being put into practice.
+        </p>
+      </div>
+    </div>
+
+    <!-- Two Ways to Contribute -->
+    <div class="row g-4 justify-content-center mb-5">
+
+      <div class="col-md-6">
+        <div class="share-choice-card h-100">
+          <div class="share-choice-icon">
+            <i class="bi bi-chat-square-text"></i>
+          </div>
+          <h3>Help Improve the Scorecard</h3>
+          <p>
+            Used the Resilience Scorecard, worked with its results, attended a
+            training, or explored one of its applications? Tell us what worked,
+            what could be improved, and what would make the framework more useful.
+          </p>
+          <button class="btn btn-primary share-form-trigger"
+                  type="button"
+                  data-form="improve">
+            Give Feedback
+            <i class="bi bi-arrow-down ms-1"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="share-choice-card h-100">
+          <div class="share-choice-icon">
+            <i class="bi bi-stars"></i>
+          </div>
+          <h3>Share Your Scorecard Story</h3>
+          <p>
+            Has the Scorecard informed a decision, changed a priority, supported
+            conservation or restoration, strengthened a partnership, or helped
+            move resilience information into action? We would love to hear what happened.
+          </p>
+          <button class="btn btn-outline-primary share-form-trigger"
+                  type="button"
+                  data-form="story">
+            Share Your Story
+            <i class="bi bi-arrow-down ms-1"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Form Area -->
+    <div id="form-area" class="share-form-area d-none">
+
+      <!-- Form Switcher -->
+      <div class="share-form-switcher" role="group" aria-label="Choose a Resilience Scorecard form">
+        <button type="button" class="btn share-switch-btn" data-form="improve">
+          <i class="bi bi-chat-square-text me-1"></i>
+          Improve the Scorecard
+        </button>
+        <button type="button" class="btn share-switch-btn" data-form="story">
+          <i class="bi bi-stars me-1"></i>
+          Share Your Story
+        </button>
+      </div>
+
+      <!-- Improve Form -->
+      <div id="improve-panel" class="share-form-panel d-none">
+        <div class="share-form-heading text-center">
+          <span class="share-form-eyebrow">Feedback</span>
+          <h3>Help Improve the Resilience Scorecard</h3>
+          <p>
+            Share your experience with the framework and help guide future
+            development, training, and applications.
+          </p>
+        </div>
+
+        <div class="google-form-shell">
+          <iframe
+            id="improve-form"
+            title="Help Improve the Resilience Scorecard form"
+            data-src="https://docs.google.com/forms/d/e/1FAIpQLSdQn1NV0pWT25jXx4QsreWBat-dn9Ytbiqe7-g-NNpxjlVZBw/viewform?embedded=true"
+            width="100%"
+            height="3581"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            loading="lazy">
+            Loading…
+          </iframe>
+        </div>
+
+        <div class="text-center mt-3">
+          <a href="https://forms.gle/89RuHMRZcwMExfrY6"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="share-external-link">
+            Open this form in a new tab
+            <i class="bi bi-box-arrow-up-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Story Form -->
+      <div id="story-panel" class="share-form-panel d-none">
+        <div class="share-form-heading text-center">
+          <span class="share-form-eyebrow">Impact</span>
+          <h3>Share Your Scorecard Story</h3>
+          <p>
+            Tell us how Scorecard results have informed decisions, actions,
+            partnerships, or outcomes in your landscape.
+          </p>
+        </div>
+
+        <div class="google-form-shell">
+          <iframe
+            id="story-form"
+            title="Share Your Scorecard Story form"
+            data-src="https://docs.google.com/forms/d/e/1FAIpQLScRcXurnMy6ae4F__osKNeIev0vG_SFaRnhwjPIsv39bIYhlw/viewform?embedded=true"
+            width="100%"
+            height="3442"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            loading="lazy">
+            Loading…
+          </iframe>
+        </div>
+
+        <div class="text-center mt-3">
+          <a href="https://forms.gle/TPwF2DafQT4k1WaN7"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="share-external-link">
+            Open this form in a new tab
+            <i class="bi bi-box-arrow-up-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Contact Prompt -->
+    <div class="share-contact-note text-center">
+      <i class="bi bi-envelope me-2"></i>
+      Have a question or want to discuss a potential application?
+      <a href="contact.html">Contact the Resilience Scorecard team.</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Canonical Footer (from index.html) -->
+<footer class="bg-dark text-white py-4">
+  <div class="container">
+
+    <!-- Footer Top -->
+    <div class="row">
+
+      <!-- About -->
+      <div class="col-lg-6 mb-3 mb-lg-0">
+        <h5>The Resilience Scorecard</h5>
+        <p class="mb-0">
+          A spatial decision-support framework for assessing resilience across multiple environmental hazards and informing conservation priorities.
+        </p>
+      </div>
+
+      <!-- Explore -->
+      <div class="col-lg-3 mb-3 mb-lg-0">
+        <h6>Explore</h6>
+        <ul class="list-unstyled">
+          <li>
+            <a href="how-to.html" class="text-white-50">How it Works</a>
+          </li>
+          <li>
+            <a href="tool.html" class="text-white-50">Training</a>
+          </li>
+          <li>
+            <a href="spotlight.html" class="text-white-50">Case Studies</a>
+          </li>
+          <li>
+            <a href="survey.html" class="text-white-50">Feedback</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Connect -->
+      <div class="col-lg-3">
+        <h6>Connect</h6>
+
+        <div class="d-flex gap-3">
+
+          <!-- GitHub -->
+          <a href="https://github.com/raeabail/resilience-app-v2"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="text-white-50"
+             aria-label="View the Resilience Scorecard on GitHub"
+             title="GitHub">
+            <i class="bi bi-github fs-4"></i>
+          </a>
+
+          <!-- Contact -->
+          <a href="contact.html"
+             class="text-white-50"
+             aria-label="Contact the Resilience Scorecard team"
+             title="Contact">
+            <i class="bi bi-envelope fs-4"></i>
+          </a>
+
+          <!-- Sentinel Landscapes -->
+          <a href="https://sentinellandscapes.org/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="text-white-50"
+             aria-label="Visit Sentinel Landscapes"
+             title="Sentinel Landscapes">
+            <i class="bi bi-globe2 fs-4"></i>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Partners -->
+    <div class="partner-lockup">
+
+      <div class="partner-label">
+        Developed With Support From
+      </div>
+
+      <!-- Top Row -->
+      <div class="partner-lockup-row">
+
+        <a href="https://mn.gov/mnng/camp-ripley/environmental/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="partner-brand partner-brand-camp">
+          <img src="assets/camp_ripley_logo.png" alt="Camp Ripley">
+        </a>
+
+        <a href="https://www.repi.mil/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="partner-brand partner-brand-repi">
+          <img src="assets/REPI_logo.png" alt="REPI">
+        </a>
+
+        <a href="https://www.nrcs.usda.gov/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="partner-brand partner-brand-nrcs">
+          <img src="assets/nrcs_logo.jpg" alt="NRCS">
+        </a>
+
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="partner-lockup-row partner-lockup-row-secondary">
+        <a href="https://www.morrisonswcd.org/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="partner-brand partner-brand-morrison">
+          <img src="assets/morrison_logo1.png.jpg" alt="Morrison Soil and Water">
+        </a>
+
+        <a href="https://sentinellandscapes.org/landscapes/camp-ripley/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="partner-brand partner-brand-sentinel">
+          <img src="assets/SL_Lockups_CampRipley_DOW_stacked_top.png" alt="Camp Ripley Sentinel Landscape">
+        </a>
+        
+        <a href="https://legacyworksgroup.com/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="partner-brand partner-brand-lwg">
+          <img src="assets/lwg_logo.png" alt="LegacyWorks Group">
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <hr class="my-3 bg-white">
+    <div class="text-center text-white-50">
+      <small>&copy; 2026 Sentinel Landscapes. All rights reserved.</small>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const formArea = document.getElementById('form-area');
+  const panels = {
+    improve: document.getElementById('improve-panel'),
+    story: document.getElementById('story-panel')
+  };
+  const iframes = {
+    improve: document.getElementById('improve-form'),
+    story: document.getElementById('story-form')
+  };
+  const switchButtons = document.querySelectorAll('.share-switch-btn');
+  const triggers = document.querySelectorAll('.share-form-trigger, .share-switch-btn');
+
+  function loadForm(key) {
+    const iframe = iframes[key];
+    if (iframe && !iframe.src) {
+      iframe.src = iframe.dataset.src;
+    }
+  }
+
+  function showForm(key, shouldScroll = true) {
+    if (!panels[key]) return;
+
+    formArea.classList.remove('d-none');
+
+    Object.entries(panels).forEach(([name, panel]) => {
+      panel.classList.toggle('d-none', name !== key);
+    });
+
+    switchButtons.forEach((button) => {
+      const active = button.dataset.form === key;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+
+    loadForm(key);
+
+    if (shouldScroll) {
+      setTimeout(function () {
+        formArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    }
+  }
+
+  triggers.forEach((button) => {
+    button.addEventListener('click', function () {
+      showForm(button.dataset.form);
+    });
+  });
+});
+</script>
+</body>
+</html>
