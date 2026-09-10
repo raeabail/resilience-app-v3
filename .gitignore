@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.eggs/
+*.log
+*.sqlite3
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+*.ipynb
+
+# Build / Packaging
+build/
+dist/
+*.egg
+*.manifest
+*.spec
+
+# Node / Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+.cache/
+.next/
+out/
+
+# Environment files
+*.env
+.env.*
+.envrc
+
+# VSCode / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System
+.DS_Store
+Thumbs.db
+
+# GIS data (if not needed in repo)
+*.tif
+*.tiff
+*.shp
+*.shx
+*.dbf
+*.prj
+*.qpj
+*.gpkg
+*.geojson
+*.zip
+
+# Temporary uploads
+tmp/
+temp/
+*.tmp

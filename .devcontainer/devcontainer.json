@@ -1,0 +1,9 @@
+{
+  "name": "Resilience App v2",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": { "version": "3.11" }
+  },
+  "postCreateCommand": "pip install -r backend/requirements.txt",
+  "forwardPorts": [8000],
+  "portsAttributes": { "8000": { "label": "FastAPI", "onAutoForward": "openBrowser" } }
+}
